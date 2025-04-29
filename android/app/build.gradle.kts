@@ -6,11 +6,13 @@ plugins {
 }
 
 android {
-    namespace "com.example.bluetooth_serial"
+    // ✅ حدد الـ namespace بشكل صحيح (ده اللي بيحل الخطأ)
+     namespace = "com.example.bluetooth_serial"
+
+
+
     ndkVersion = "27.0.12077973"
-    
     compileSdk = flutter.compileSdkVersion
-    
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -22,10 +24,8 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        // ✅ لو المشروع ده هو التطبيق الرئيسي
         applicationId = "com.example.carContolApp"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
@@ -34,8 +34,6 @@ android {
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
         }
     }

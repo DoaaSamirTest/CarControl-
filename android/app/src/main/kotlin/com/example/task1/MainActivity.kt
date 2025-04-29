@@ -1,5 +1,7 @@
-package com.example.task1
+package com.example.bluetooth_serial
 
 import io.flutter.embedding.android.FlutterActivity
 
-class MainActivity : FlutterActivity()
+class MainActivity : FlutterActivity(){
+
+}
